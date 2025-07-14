@@ -74,3 +74,29 @@ input{
     border: 1px solid #3A35411F;
     border-radius: 6px;
 }
+
+.gender{
+    width: 280px;    
+    height: 48px;
+    padding: 10px;
+    border: 1px solid #3A35411F;
+    border-radius: 6px;
+    color: #333333AD;
+}
+
+.gender-option{
+    color: #333333AD;
+
+}
+
+.country{
+    display: flex;
+    width: 300px;
+    border: 1px solid #3A35411F;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    color: #333333AD;
+    font-size: 14px;
+}
