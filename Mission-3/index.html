@@ -45,15 +45,18 @@
                 <label for="number">No. Hp <span class="required">*</span>
                 </label>
                 <div class="country">
-
-                    <img src="images/indonesia.png" alt="indonesia">
-                    <select name="number" class="country-select" required>
-                        <option value="+62">+62</option>
-                        <option value="+60">+60</option>
-                        <option value="+253">+253</option>
-                        <option value="+72">+72</option>
-                    </select>
-                    <input type="number" id="number" name="number" required>
+                    <div class="country-code">
+                        <div class="country-code-img">
+                            <img src="images/indonesia.png" alt="indonesia">
+                        </div>
+                        <select name="kode" class="country-select" required>
+                            <option value="+62">+62</option>
+                            <option value="+60">+60</option>
+                            <option value="+253">+253</option>
+                            <option value="+72">+72</option>
+                        </select>
+                    </div>
+                    <input class="number-input" type="number" id="number" name="number" required>
                 </div>
             </div>
             <!-- <button type="submit">Daftar</button> -->

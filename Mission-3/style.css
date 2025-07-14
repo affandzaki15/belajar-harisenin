@@ -55,7 +55,7 @@ body{
 .form-group{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -91,12 +91,50 @@ input{
 
 .country{
     display: flex;
-    width: 300px;
-    border: 1px solid #3A35411F;
-    border-radius: 6px;
+    width: 110%;
     margin: 0 auto;
     margin-bottom: 20px;
     padding-top: 20px;
     color: #333333AD;
     font-size: 14px;
+}
+
+
+.country-code {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #3A35411F;
+    border-radius: 6px;
+    background-color: #F9FAFB;
+}
+
+.country-select {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.country-code-img {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto 10px;
+}
+
+.country-code-img img {
+    width: 19px;
+    height: 22px;
+    object-fit: cover;
+}
+
+.number-input{
+    width: 180px;    
+    height: 48px;
+    border: 1px solid #3A35411F;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-left: 6px;
 }
