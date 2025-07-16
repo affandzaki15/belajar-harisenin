@@ -1,140 +1,140 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 
-body{
-    background-color: #FFFDF3;
+body {
+  background-color: #fffdf3;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 20px 10px 40px rgba(62, 67, 74, 0.31);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 20px 10px 40px rgba(62, 67, 74, 0.31);
 }
 
-.logo img{
-    width: 100%;
-    padding: 16px 24px;
+.logo img {
+  width: 100%;
+  padding: 16px 24px;
 }
 
-.form-wrapper{
-    background-color: #fff;
-    width: 320px;
-    height: 866px;
-    border: 1px #f1f1f1 solid;
-    border-radius: 4px;
-    margin: 50px auto;
-    padding: 20px;
+.form-wrapper {
+  background-color: #fff;
+  width: 320px;
+  height: 922px;
+  border: 1px #f1f1f1 solid;
+  border-radius: 4px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.form-header h1{
-    font-weight: 600;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
+.form-header h1 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.required{
-    color: red;
+.required {
+  color: red;
 }
 
-.form-header p{
-    font-weight: 400;
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #333333AD;
+.form-header p {
+  font-weight: 400;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333333ad;
 }
 
-.form-group{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    color: #333333AD;
-    font-size: 14px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  color: #333333ad;
+  font-size: 14px;
 }
 
-label{
-    margin-bottom: 10px;
+label {
+  margin-bottom: 5px;
 }
 
-input{
-    width: 280px;    
-    height: 48px;
-    padding: 10px;
-    border: 1px solid #3A35411F;
-    border-radius: 6px;
+input {
+  width: 280px;
+  height: 48px;
+  padding: 10px;
+  border: 1px solid #3a35411f;
+  border-radius: 6px;
 }
 
-.gender{
-    width: 280px;    
-    height: 48px;
-    padding: 10px;
-    border: 1px solid #3A35411F;
-    border-radius: 6px;
-    color: #333333AD;
+.gender {
+  width: 280px;
+  height: 48px;
+  padding: 10px;
+  border: 1px solid #3a35411f;
+  border-radius: 6px;
+  color: #333333ad;
 }
 
-.gender-option{
-    color: #333333AD;
-
+.gender-option {
+  color: #333333ad;
 }
 
-.country{
-    display: flex;
-    width: 110%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    color: #333333AD;
-    font-size: 14px;
+.country {
+  display: flex;
+  margin: 0 auto;
+  font-size: 14px;
 }
-
 
 .country-code {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #3A35411F;
-    border-radius: 6px;
-    background-color: #F9FAFB;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #3a35411f;
+  border-radius: 6px;
+  background-color: #1c466f;
 }
 
 .country-select {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    background-color: #fff;
+  width: 50px;
+  font-size: 14px;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #3a35411f;
+  border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
 }
 
 .country-code-img {
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: auto 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border: 1px solid #3a35411f;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .country-code-img img {
-    width: 19px;
-    height: 22px;
-    object-fit: cover;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
 }
 
-.number-input{
-    width: 180px;    
-    height: 48px;
-    border: 1px solid #3A35411F;
-    border-radius: 6px;
-    padding-left: 10px;
-    margin-left: 6px;
+.number-input {
+  width: 180px;
+  height: 48px;
+  border: 1px solid #3a35411f;
+  border-radius: 6px;
+  padding-left: 10px;
+  margin-left: 6px;
 }
