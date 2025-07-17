@@ -26,7 +26,7 @@ body {
 .form-wrapper {
   background-color: #fff;
   width: 320px;
-  height: 922px;
+  height: 966px;
   border: 1px #f1f1f1 solid;
   border-radius: 4px;
   margin: 50px auto;
@@ -61,6 +61,7 @@ body {
   padding-top: 20px;
   color: #333333ad;
   font-size: 14px;
+  position: relative;
 }
 
 label {
@@ -137,4 +138,116 @@ border-bottom-right-radius: 6px;
   border-radius: 6px;
   padding-left: 10px;
   margin-left: 6px;
+}
+
+.password-wrapper{
+  position: relative;
+
+}
+.password-wrapper .eye{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.form-footer{
+  margin-top: 20px;
+  text-align: right;
+  color: #333333ad;
+  font-size: 14px;
+}
+.button{
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn{
+  width: 280px;
+  height: 34px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+}
+
+.daftar{
+  background-color: #3ecf4c;
+  color: #fff;
+  border: 1px solid #3ecf4c;
+  border-radius: 10px;
+  font-weight: bold;
+ 
+}
+
+.masuk{
+  background-color: #E2FCD9CC;
+  color: #3ecf4c;
+  border: 1px solid #3ecf4c;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.or{
+  margin: 20px 0;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.or::before, .or::after{
+  border-bottom: 1px solid #333333ad;
+  content: "";
+  flex: 1;
+}
+
+.or span{
+  margin: 0 10px;
+  color: #333333ad;
+  font-size: 14px;
+}
+
+.register-google{
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  width: 280px;
+  height: 34px;
+  color: #333333ad;
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.register-google img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* ------------------ DESKTOP ------------------ */
+@media (min-width: 1024px) {
+    .form-wrapper {
+        width: 590px;
+        height: 1000px;
+        margin: 100px auto;
+        padding: 40px;
+    }
+
+    .form-header h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+    .form-header p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .button {
+        flex-direction: row;
+    }
 }
