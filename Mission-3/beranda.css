@@ -171,7 +171,6 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  padding: 20px;
 }
 .content-beranda {
   display: flex;
@@ -528,7 +527,7 @@ nav {
   }
   .content-beranda-container {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 90px;
+    padding: 0 40px;
   }
 
    .footer-main {
