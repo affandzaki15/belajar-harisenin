@@ -17,3 +17,13 @@ function updateWaktu() {
 
 setInterval(updateWaktu, 1000);
 updateWaktu();
+
+
+const time = new Date();
+
+const jam = time.getHours().toString().padStart(2, '0');
+const menit = time.getMinutes().toString().padStart(2, '0');
+const detik = time.getSeconds().toString().padStart(2, '0');
+
+const timefull = `jam sekarang: ${jam}:${menit}:${detik}`;
+console.log(timefull);
