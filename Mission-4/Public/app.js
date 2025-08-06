@@ -1,10 +1,9 @@
 function updateWaktu() {
-  const hariList = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
   const tanggal = new Date();
 
-  const hari = hariList[tanggal.getDay()];
+  const hari = tanggal.toLocaleString('us-US', { weekday: 'long' });
   const tanggalNum = tanggal.getDate();
-  const bulan = tanggal.toLocaleString('id-ID', { month: 'long' });
+  const bulan = tanggal.toLocaleString('us-US', { month: 'long' });
   const tahun = tanggal.getFullYear();
 
   const jam = tanggal.getHours().toString().padStart(2, '0');
@@ -18,12 +17,3 @@ function updateWaktu() {
 setInterval(updateWaktu, 1000);
 updateWaktu();
 
-
-const time = new Date();
-
-const jam = time.getHours().toString().padStart(2, '0');
-const menit = time.getMinutes().toString().padStart(2, '0');
-const detik = time.getSeconds().toString().padStart(2, '0');
-
-const timefull = `jam sekarang: ${jam}:${menit}:${detik}`;
-console.log(timefull);

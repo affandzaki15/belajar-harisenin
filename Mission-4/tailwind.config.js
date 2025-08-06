@@ -1,6 +1,7 @@
 // tailwind.config.js
 module.exports = {
-  content: ["./Public/index.html"], // sesuaikan dengan struktur project kamu
+  content: ["./**/*.html"],
+
   theme: {
     extend: {
       fontFamily: {
