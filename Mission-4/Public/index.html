@@ -93,23 +93,79 @@
   <!-- Task -->
 
   <div class="max-w-5xl mx-auto mt-10 p-7 rounded-lg bg-[#202123] font-poppins">
-    <div class="flex justify-between items-center rounded-lg  font-poppins shadow-md ">
+    <div class="flex justify-between items-center rounded-lg  font-poppins mb-5">
       <h1 class="text-2xl font-semibold text-[#ffaa7a]">Task</h1>
 
       <div class="ml-4 p-1 rounded-sm flex">
         <input type="date"
-          class="bg-[#ffaa7a] text-[#202123] font-poppins  font-semibold h-8  rounded-md p-2 focus:outline-none ">
-          <div class="font-poppins rounded-md text-md font-semibold text-[#202123] bg-[#ffaa7a]">
-            ADD
+          class="bg-[#ffaa7a] text-[#202123] font-poppins  font-semibold   rounded-md  focus:outline-none px-2 py-1 ">
+        <button onclick="addTask()"
+          class="font-poppins ml-4 rounded-md text-center items-center justify-center px-3 py-1  font-semibold text-[#202123] bg-[#ffaa7a]">
+          Add Task
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid Task -->
+    <div class="grid grid-cols-2  md:grid-cols-4 gap-6">
+
+      <!-- Task High -->
+      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+
+        <span id=""
+          class="px-4 py-1 top-0 left-0 absolute bg-[#ef4444] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">High</span>
+
+        <div class="mt-8">
+          <label class="flex items-center gap-2 justify-between items-center">
+            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
+            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
+              onclick="this.previousElementSibling.classList.toggle('line-through')">
+          </label>
+
+          <!-- Grid Task -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="task-list">
+            <!-- Task akan dimasukkan via JS -->
           </div>
+        </div>
       </div>
 
-    </div>
-  </div>
+      <!-- Task Medium -->
+      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+
+        <span id=""
+          class="px-4 py-1 top-0 left-0 absolute bg-[#f59e0b] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Medium</span>
+
+        <div class="mt-8">
+          <label class="flex items-center gap-2 justify-between items-center">
+            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
+            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
+              onclick="this.previousElementSibling.classList.toggle('line-through')">
+          </label>
+        </div>
+      </div>
+
+      <!-- Task Low -->
+      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+
+        <span id=""
+          class="px-4 py-1 top-0 left-0 absolute bg-[#10b981] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Medium</span>
+
+        <div class="mt-8">
+          <label class="flex items-center gap-2 justify-between items-center">
+            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
+            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
+              onclick="this.previousElementSibling.classList.toggle('line-through')">
+          </label>
+        </div>
 
 
 
-  <script src="app.js"></script>
+
+      </div>
+
+
+
+      <script src="app.js"></script>
 </body>
 
 </html>
