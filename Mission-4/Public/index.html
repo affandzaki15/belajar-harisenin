@@ -48,7 +48,7 @@
 
       <!-- Card 1 -->
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
-        <img src="images/WhatsApp Image 2025-08-04 at 21.54.05_8adf3614.jpg" alt="Foto"
+        <img src="images/clock_5447133.png" alt="Foto"
           class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
           <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
@@ -58,7 +58,7 @@
 
       <!-- Card 2 -->
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
-        <img src="images/WhatsApp Image 2025-08-04 at 21.54.05_8adf3614.jpg" alt="Foto"
+        <img src="images/arrow_11672158.png" alt="Foto"
           class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
           <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
@@ -68,7 +68,7 @@
 
       <!-- Card 3 -->
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
-        <img src="images/WhatsApp Image 2025-08-04 at 21.54.05_8adf3614.jpg" alt="Foto"
+        <img src="images/bar_11640847.png" alt="Foto"
           class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
           <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
@@ -78,7 +78,7 @@
 
       <!-- card 4 -->
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
-        <img src="images/WhatsApp Image 2025-08-04 at 21.54.05_8adf3614.jpg" alt="Foto"
+        <img src="images/arrow_11672109.png" alt="Foto"
           class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
           <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
@@ -116,7 +116,7 @@
           class="px-4 py-1 top-0 left-0 absolute bg-[#ef4444] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">High</span>
 
         <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between items-center">
+          <label class="flex items-center gap-2 justify-between">
             <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
             <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
               onclick="this.previousElementSibling.classList.toggle('line-through')">
@@ -136,7 +136,7 @@
           class="px-4 py-1 top-0 left-0 absolute bg-[#f59e0b] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Medium</span>
 
         <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between items-center">
+          <label class="flex items-center gap-2 justify-between ">
             <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
             <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
               onclick="this.previousElementSibling.classList.toggle('line-through')">
@@ -151,21 +151,51 @@
           class="px-4 py-1 top-0 left-0 absolute bg-[#10b981] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Medium</span>
 
         <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between items-center">
+          <label class="flex items-center gap-2 justify-between">
             <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
             <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
               onclick="this.previousElementSibling.classList.toggle('line-through')">
           </label>
         </div>
-
-
-
-
       </div>
 
+    </div>
+  </div>
 
+  <!-- Add Task Modal -->
+  <div class="bg-[#202123] max-w-lg mx-auto mt-10 p-7 rounded-lg mb-9">
+    <div>
+      <h1 class="text-2xl font-bold text-[#ffaa7a] font-poppins text-center">Add Task</h1>
+      <form id="form" class="mt-6">
+        <div class="mt-6">
+          <label for="task-list" class="block text-[#ffaa7a] font-poppins font-semibold text-lg">Description</label>
+          <input type="text" placeholder="Task Name" class="bg-amber-50 border p-2 rounded w-full mt-2 h-12" name="task"
+            required>
+        </div>
+        <div class="flex justify-between mt-6">
+          <div>
+            <label for="task-list" class="text-[#ffaa7a] font-poppins font-bold text-lg block">Level</label>
+            <select name="Level" class="bg-amber-50 border p-2 rounded w-44 mt-2 h-12" required>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+          <div>
+            <label for="task-list" class="text-[#ffaa7a] font-poppins font-bold text-lg">Date</label>
+            <input type="date" name="date" class="bg-amber-50 border p-2 rounded w-full mt-2 h-12" required>
+          </div>
+        </div>
 
-      <script src="app.js"></script>
+      <button class="bg-[#ffaa7a] mt-6 text-black font-poppins font-bold py-1.5 px-4 rounded mx-auto block">
+        Submit
+      </button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
