@@ -50,7 +50,7 @@
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
         <img src="images/clock_5447133.png" alt="Foto" class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
-          <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
+          <p class="text-sm text-[#c0c0c0]" id="overdue-count">0</p>
           <h2 class="text-lg font-semibold text-[#ef4444]">Overdue</h2>
         </div>
       </div>
@@ -59,7 +59,7 @@
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
         <img src="images/arrow_11672158.png" alt="Foto" class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
-          <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
+          <p class="text-sm text-[#c0c0c0]" id="high-count">0</p>
           <h2 class="text-lg font-semibold text-amber-600">High</h2>
         </div>
       </div>
@@ -68,7 +68,7 @@
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
         <img src="images/bar_11640847.png" alt="Foto" class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
-          <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
+          <p class="text-sm text-[#c0c0c0]" id="medium-count">0</p>
           <h2 class="text-lg font-semibold text-[#f59e0b]">Medium</h2>
         </div>
       </div>
@@ -77,7 +77,7 @@
       <div class="bg-[#343541] p-4 rounded-lg flex items-center">
         <img src="images/arrow_11672109.png" alt="Foto" class="w-16 h-16 rounded-full object-cover">
         <div class="ml-4">
-          <p class="text-sm text-[#c0c0c0]" id="todo-count">0</p>
+          <p class="text-sm text-[#c0c0c0]" id="low-count">0</p>
           <h2 class="text-lg font-semibold text-[#10b981]">Low</h2>
         </div>
       </div>
@@ -95,7 +95,7 @@
       <div class="ml-4 p-1 rounded-sm flex">
         <input type="date"
           class="bg-[#ffaa7a] text-[#202123] font-poppins  font-semibold   rounded-md  focus:outline-none px-2 py-1 hover:bg-amber-50 ">
-        <button onclick="openModal()"
+        <button onclick="openModal()" id="open-modal-btn"
           class="font-poppins ml-4 rounded-md text-center items-center justify-center px-3 py-1  font-semibold text-[#202123] bg-[#ffaa7a] hover:bg-amber-50">
           Add Task
         </button>
@@ -106,52 +106,46 @@
     <div class="grid grid-cols-2  md:grid-cols-4 gap-6">
 
       <!-- Task High -->
-      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+      <div class="bg-[#343541] p-4 rounded-lg mt-2 relative">
 
-        <span id=""
+
+        <span
           class="px-4 py-1 top-0 left-0 absolute bg-[#ef4444] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">High</span>
 
-        <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between">
-            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
-            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
-              onclick="this.previousElementSibling.classList.toggle('line-through')">
-          </label>
 
-          <!-- Grid Task -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="task-list">
-            <!-- Task akan dimasukkan via JS -->
-          </div>
+        <button class="absolute top-2 right-3 p-1 rounded-full">
+          <img src="images/delete_6861362.png" alt="Delete" class="w-6 h-6">
+        </button>
+        <div id="high-task" class="mt-8 task-container">
+         
         </div>
       </div>
 
       <!-- Task Medium -->
-      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+      <div class="bg-[#343541] p-4 rounded-lg mt-2 relative">
 
-        <span id=""
+        <span 
           class="px-4 py-1 top-0 left-0 absolute bg-[#f59e0b] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Medium</span>
-
-        <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between ">
-            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
-            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
-              onclick="this.previousElementSibling.classList.toggle('line-through')">
-          </label>
+        <button class="absolute top-2 right-3 p-1 rounded-full">
+          <img src="images/delete_6861362.png" alt="Delete" class="w-6 h-6">
+        </button>
+        <div id="medium-task" class="mt-8 task-container">
+          
         </div>
       </div>
 
       <!-- Task Low -->
-      <div id="" class="bg-[#343541] p-4 rounded-lg mt-2 relative">
+      <div class="bg-[#343541] p-4 rounded-lg mt-2 relative">
 
-        <span id=""
+        <span 
           class="px-4 py-1 top-0 left-0 absolute bg-[#10b981] mb-4 rounded-tr-none rounded-tl-lg rounded-br-lg font-poppins text-center font-semibold text-black">Low</span>
 
-        <div class="mt-8">
-          <label class="flex items-center gap-2 justify-between">
-            <span id="" class="text-[#ffaa7a] font-poppins font-bold">Gaming dan main mobile legends</span>
-            <input type="checkbox" class="form-checkbox h-8 w-8 accent-[#ffaa7a] "
-              onclick="this.previousElementSibling.classList.toggle('line-through')">
-          </label>
+        <button class="absolute top-2 right-3 p-1 rounded-full">
+          <img src="images/delete_6861362.png" alt="Delete" class="w-6 h-6">
+        </button>
+
+        <div id="low-task" class="mt-8 task-container">
+          
         </div>
       </div>
 
@@ -159,39 +153,42 @@
   </div>
 
   <!-- Add Task Modal -->
-  <div id="modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center bg-[#202123] max-w-md mx-auto m-20 p-7 rounded-lg mb-14">
-     <button onclick="closeModal()" 
-      class="absolute top-4 right-4 text-[#ffaa7a] text-2xl font-bold hover:text-white">
+  <div id="modal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center bg-[#202123] max-w-md mx-auto m-20 p-7 rounded-lg mb-14">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-[#ffaa7a] text-2xl font-bold hover:text-white">
       &times;
     </button>
     <div>
       <h1 class="text-2xl font-bold text-[#ffaa7a] font-poppins text-center">Add Task</h1>
-      <form class="mt-6">
+      <form id="add-task-form" class="mt-6">
         <div class="mt-6">
-          <label for="task-list" class="block text-[#ffaa7a] font-poppins font-semibold text-lg">Description</label>
-          <input type="text" placeholder="Task Name" class="bg-amber-50 border p-2 rounded w-full mt-2 h-12" name="task"
-            required>
+          <label for="task-input" class="block text-[#ffaa7a] font-poppins font-semibold text-lg">Description</label>
+          <input id="task-input" type="text" placeholder="Task Name"
+            class="bg-amber-50 border p-2 rounded w-full mt-2 h-12" name="task" required>
         </div>
+
         <div class="flex justify-between mt-6">
           <div>
-            <label for="task-list" class="text-[#ffaa7a] font-poppins font-bold text-lg block">Level</label>
-            <select name="Level" class="bg-amber-50 border p-2 rounded w-44 mr-4 mt-2 h-12" required>
+            <label for="level-select" class=" text-[#ffaa7a] font-poppins font-bold text-lg block">Level</label>
+            <select id="level-select" name="Level" class="bg-amber-50 border p-2 rounded w-44 mr-4 mt-2 h-12" required>
               <option value="High">High</option>
               <option value="Medium">Medium</option>
               <option value="Low">Low</option>
             </select>
           </div>
           <div>
-            <label for="task-list" class="text-[#ffaa7a] font-poppins font-bold text-lg">Date</label>
-            <input type="date" name="date" class="bg-amber-50 border p-2 rounded w-full mt-2 h-12" required>
+            <label for="date-input" class="text-[#ffaa7a] font-poppins font-bold text-lg">Date</label>
+            <input id="date-input" type="date" name="date" class="bg-amber-50 border p-2 rounded w-full mt-2 h-12"
+              required>
           </div>
         </div>
 
-        <button class="bg-[#ffaa7a] mt-10 text-black font-poppins font-bold py-1.5 px-4 rounded mx-auto block">
+        <button type="submit"
+          class="bg-[#ffaa7a] mt-10 text-black font-poppins font-bold py-1.5 px-4 rounded mx-auto block">
           Submit
         </button>
       </form>
-     
+
 
     </div>
   </div>
@@ -201,11 +198,15 @@
   <div class="bg-[#202123] max-w-5xl mx-auto mt-10 p-7 rounded-lg mb-9">
     <div class="flex justify-between">
       <h1 class="text-2xl font-semibold text-[#ffaa7a]">Completed Task</h1>
-      <button class="justify-between bg-red-600 hover:bg-red-700 text-amber-100 items-end rounded-lg px-3 py-1 font-poppins font-semibold">
+      <button
+        class="justify-between bg-red-600 hover:bg-red-700 text-amber-100 items-end rounded-lg px-3 py-1 font-poppins font-semibold">
         Delete All
       </button>
     </div>
 
+    <div id="completed-list" class="mt-4 grid gap-4">
+      <!-- completed tasks inserted by JS -->
+    </div>
   </div>
 
   <script src="app.js"></script>
