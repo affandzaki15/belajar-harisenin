@@ -1,23 +1,24 @@
 import InputField from "../atoms/inputField";
 import Button from "../atoms/Button";
 import { Link } from "react-router-dom";
-import LogoImage from "../../assets/images/vector.png"; 
+import LogoImage from "../../assets/images/vector.png";
+import LogoImages from "../../assets/images/google-icon.png";
 
 function LoginForm() {
   return (
     <form className="space-y-4">
       {/* Email */}
       <div className="flex flex-col space-y-1">
-        <label className="text-sm font-medium text-gray-700">
-          Email<span className="text-red-500">*</span>
+        <label className="text-sm font-poppins font-medium text-[#333333ad] border-[#3a35411f]">
+          E-Mail<span className="text-red-500">*</span>
         </label>
-        <InputField type="email" placeholder="Masukkan email" />
+        <InputField type="email" placeholder="" />
       </div>
 
       {/* Password */}
       {/* Password */}
       <div className="flex flex-col space-y-1 relative">
-        <label className="text-sm font-medium text-gray-700">
+        <label className="text-sm font-medium text-[#333333ad]">
           Kata Sandi <span className="text-red-500">*</span>
         </label>
 
@@ -25,7 +26,7 @@ function LoginForm() {
         <div className="relative">
           <InputField
             type="password"
-            placeholder="Masukkan kata sandi"
+            placeholder=""
             className="pr-10" // kasih padding kanan biar tidak ketimpa icon
           />
           <img
@@ -38,7 +39,10 @@ function LoginForm() {
 
       {/* Lupa Password */}
       <div className="flex justify-end">
-        <Link to="#" className="text-sm font-medium text-[#333333ad] hover:underline">
+        <Link
+          to="#"
+          className="text-sm font-medium text-[#333333ad] hover:underline"
+        >
           Lupa Password?
         </Link>
       </div>
@@ -46,18 +50,15 @@ function LoginForm() {
       <Button variant="primary">Masuk</Button>
       <Button variant="outline">Daftar</Button>
 
-      <div className="text-center mt-2">
-        <p className="text-sm">
-          Belum punya akun?{" "}
-          <Link to="/register" className="text-green-500">
-            Daftar
-          </Link>
-        </p>
+      <div className="flex items-center my-6">
+        <div className="flex-grow border-b border-[#333333ad]" />
+        <span className="mx-2 text-[#333333ad] text-sm">atau</span>
+        <div className="flex-grow border-b border-[#333333ad]" />
       </div>
 
-      <Button variant="outline">
+      <Button variant="secondary">
         <img
-          src="/google-icon.svg"
+          src={LogoImages}
           alt="Google"
           className="w-5 h-5 inline-block mr-2"
         />

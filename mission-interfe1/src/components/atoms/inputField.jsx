@@ -5,7 +5,7 @@ function InputField({ type, placeholder, value, onChange }) {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="w-full border rounded-md p-3"
+      className="w-full border border-[#3a35411f] rounded-md p-3"
     />
   );
 }
