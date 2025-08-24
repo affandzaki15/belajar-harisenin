@@ -1,55 +1,74 @@
+import { useState } from "react";
 import Logo from "../atoms/logo";
 import { Link } from "react-router-dom";
+import avatar from "../../assets/images/icon-kanan.png";
+import Footer from "../organisms/footer";
 
 function MainLayout({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow px-6 py-4 flex justify-between items-center">
+      <header className="bg-white shadow-[20px_10px_40px_rgba(62,67,74,0.31)] relative w-full h-[74px] md:pl-10 md:shadow-none px-6 py-4 flex justify-between items-center">
+        {/* Logo di kiri */}
         <Logo />
-        <nav className="space-x-4">
-          <Link to="/" className="text-gray-700">Beranda</Link>
-          <Link to="/login" className="text-gray-700">Login</Link>
-          <Link to="/register" className="text-gray-700">Register</Link>
-        </nav>
+        {/* Desktop Menu (hidden di hp) */}
+        <div className="hidden md:flex items-center space-x-6">
+          {/* Kategori */}
+          <details className="relative">
+            <summary className="cursor-pointer text-gray-700 font-medium hover:text-orange-500 list-none">
+              Kategori
+            </summary>
+          </details>
+
+          {/* Foto profil */}
+          <details className="relative">
+            <summary className="list-none cursor-pointer">
+              <img
+                src={avatar}
+                alt="Profile"
+                className="w-10 h-10 rounded-full border border-gray-300"
+              />
+            </summary>
+            <ul className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
+             
+              <li><Link to="/login" className="block px-4 py-2 hover:bg-orange-100">Login</Link></li>
+              <li><Link to="/register" className="block px-4 py-2 hover:bg-orange-100">Register</Link></li>
+            </ul>
+          </details>
+        </div>
+
+        {/* Hamburger (muncul di hp) */}
+        <button
+          className="md:hidden flex flex-col space-y-1"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="w-6 h-0.5 bg-gray-700"></span>
+          <span className="w-6 h-0.5 bg-gray-700"></span>
+          <span className="w-6 h-0.5 bg-gray-700"></span>
+        </button>
       </header>
+
+      {/* Mobile Menu (hanya muncul kalau isOpen true) */}
+      {isOpen && (
+        <div className="md:hidden bg-white shadow px-6 py-4 space-y-4">
+          <div>
+            <ul className="pl-4">
+              <li><Link to="/login" className="block py-1 hover:text-orange-500">Login</Link></li>
+              <li><Link to="/register" className="block py-1 hover:text-orange-500">Register</Link></li>
+            </ul>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="flex-grow bg-[#fdf8f2]">{children}</main>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 text-gray-600 text-sm px-6 py-8 mt-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div>
-            <p className="font-bold text-orange-500">videobelajar</p>
-            <p>© 2025 Semua Hak Dilindungi</p>
-          </div>
-          <div>
-            <p className="font-semibold">Kategori</p>
-            <ul>
-              <li>Teknologi</li>
-              <li>Bisnis</li>
-              <li>Desain</li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold">Perusahaan</p>
-            <ul>
-              <li>Tentang Kami</li>
-              <li>Karir</li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold">Ikuti Kami</p>
-            <div className="flex space-x-2">
-              <a href="#">FB</a>
-              <a href="#">IG</a>
-              <a href="#">YT</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+       {/* Footer */}
+       <Footer />
     </div>
   );
 }
+
 export default MainLayout;
