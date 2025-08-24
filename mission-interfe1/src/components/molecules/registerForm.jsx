@@ -1,7 +1,7 @@
 import InputField from "../atoms/inputField";
 import Button from "../atoms/Button";
 import { Link } from "react-router-dom";
-import LogoImage from "../../assets/images/vector.png";
+import LogoImage from "../../assets/images/Vector.png";
 import LogoImages from "../../assets/images/google-icon.png";
 import LogoImagess from "../../assets/images/Indonesia.png";
 
