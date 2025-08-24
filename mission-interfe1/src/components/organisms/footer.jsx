@@ -15,9 +15,9 @@ function Footer() {
 
   return (
     <footer className="bg-white border-t text-gray-700 px-6 pt-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* === Desktop Footer === */}
-        <div className="hidden md:grid grid-cols-4 gap-6">
+        <div className="hidden md:grid grid-cols-4 gap-10 lg:gap-40">
           {/* Kiri: Logo + Deskripsi */}
           <div>
             <Logo />
@@ -73,7 +73,7 @@ function Footer() {
 
       {/* === Batas bawah (garis + copyright) === */}
       {/* Wrapper biar sejajar */}
-      <div className="w-full max-w-6xl mx-auto px-1 pb-2.5">
+      <div className="w-full max-w-7xl mx-auto px-1 pb-2.5">
         {/* Garis */}
         <hr className="border-t border-gray-300 w-full mb-4 mt-4" />
 

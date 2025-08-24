@@ -10,7 +10,7 @@ function MainLayout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow-[20px_10px_40px_rgba(62,67,74,0.31)] relative w-full h-[74px] md:pl-10 md:shadow-none px-6 py-4 flex justify-between items-center">
+      <header className="bg-white shadow-[20px_10px_40px_rgba(62,67,74,0.31)] relative w-full h-[74px] md:pl-20 md:shadow-none px-6 py-4 flex justify-between items-center">
         {/* Logo di kiri */}
         <Logo />
         {/* Desktop Menu (hidden di hp) */}
@@ -23,7 +23,7 @@ function MainLayout({ children }) {
           </details>
 
           {/* Foto profil */}
-          <details className="relative">
+          <details className="relative pr-20">
             <summary className="list-none cursor-pointer">
               <img
                 src={avatar}
@@ -31,7 +31,7 @@ function MainLayout({ children }) {
                 className="w-10 h-10 rounded-full border border-gray-300"
               />
             </summary>
-            <ul className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
+            <ul className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg z-1">
              
               <li><Link to="/login" className="block px-4 py-2 hover:bg-orange-100">Login</Link></li>
               <li><Link to="/register" className="block px-4 py-2 hover:bg-orange-100">Register</Link></li>
